@@ -34,7 +34,7 @@ class MyCal implements ActionListener {
 
         panel1.add(numberField);
         panel2 = new JPanel();
-        panel2.setPreferredSize(new Dimension(240, 140));
+        panel2.setPreferredSize(new Dimension(250, 180));
         panel2.setLayout(new GridLayout(5, 4));
         panel2.setBorder(new LineBorder(Color.LIGHT_GRAY, 1));
 
