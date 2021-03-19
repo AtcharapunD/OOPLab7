@@ -23,11 +23,11 @@ class MyCal implements ActionListener {
         c.setLayout(new FlowLayout());
 
         panel1 = new JPanel();
-        panel1.setPreferredSize(new Dimension(270, 60));
+        panel1.setPreferredSize(new Dimension(270, 25));
         panel1.setLayout(new FlowLayout());
         panel1.setBorder(new LineBorder(Color.DARK_GRAY, 1));
 
-        numberField = new JTextField(20);
+        numberField = new JTextField(25);
         numberField.setEditable(false);
         numberField.setFont(myFont);
         numberField.setHorizontalAlignment(JTextField.RIGHT);
@@ -48,7 +48,7 @@ class MyCal implements ActionListener {
         }
         c.add(panel1);
         c.add(panel2);
-        window.setSize(250, 260);
+        window.setSize(250, 230);
         window.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         window.setVisible(true);
     }
@@ -91,8 +91,11 @@ class MyCal implements ActionListener {
             numberField.setText(str);
         }
         else if (event.getSource() == btn[10]) {
-            str += "";
+            str += ".";
             numberField.setText(str);
+        }
+        else if (event.getSource() == btn[11]) {
+            numberField.setText(" ");
         }
     } // end method actionPerformed
 }
